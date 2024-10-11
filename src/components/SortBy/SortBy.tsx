@@ -50,7 +50,7 @@ function SortBy({
           Email
         </button>
       </div>
-      <div className={styles.sortOrderWrap}>
+      <div className={styles.orderWrap}>
         Order:
         <ListOrderButton arr={arr} sortBy={sortBy} updateFunc={updateFunc} />
       </div>
