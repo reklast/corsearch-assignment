@@ -6,7 +6,11 @@ import styles from "./UserCard.module.scss";
 function UserCard({ user }: { user: User }) {
   return (
     <div className={styles.cardWrap}>
-      <img src={user.avatar ?? avatarPlaceholder} alt="userAvatar" />
+      <img
+        className={styles.avatar}
+        src={user.avatar ?? avatarPlaceholder}
+        alt="userAvatar"
+      />
       <div className={styles.userInfo}>
         <div className={styles.name}>{user.name}</div>
         <ul>

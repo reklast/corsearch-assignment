@@ -1,8 +1,21 @@
 @import "../../styles/global-imports.scss";
 
 .cardWrap {
-    display: flex;
-    border-radius: 1.5rem;
-    background-color: $secondary-color;
-    padding: 1rem;
+  display: flex;
+  border-radius: 1.5rem;
+  background-color: $secondary-color;
+  padding: 1rem;
+}
+
+.avatar {
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.userInfo {
+    padding-left: 2rem;
+}
+
+.name {
+    font-size: 1.5rem;
 }
