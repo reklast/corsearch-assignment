@@ -30,7 +30,7 @@ function Dashboard() {
           <>
             <FilterInput arrData={userData} updateFunc={setUsers} />
             <div className={styles.sortWrap}>
-              <SortBy arr={users} updateFunc={setUsers} />
+              <SortBy arr={users} arrData={userData!} updateFunc={setUsers} />
             </div>
             <div className={styles.userCards}>
               {users.map((user, i) => (
