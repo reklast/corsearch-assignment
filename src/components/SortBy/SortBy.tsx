@@ -50,6 +50,10 @@ function SortBy({
           Email
         </button>
       </div>
+      <div className={styles.sortOrderWrap}>
+        Order:
+        <ListOrderButton arr={arr} sortBy={sortBy} updateFunc={updateFunc} />
+      </div>
     </div>
   );
 }
