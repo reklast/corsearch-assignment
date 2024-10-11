@@ -7,6 +7,7 @@ import FilterInput from "../../componentsShared/FilterInput/FilterInput";
 import UserCard from "../../componentsShared/UserCard/UserCard";
 
 import styles from "./Dashboard.module.scss";
+import SortBy from "../SortBy/SortBy";
 
 function Dashboard() {
   const [users, setUsers] = useState<User[] | undefined>(undefined);
@@ -27,7 +28,10 @@ function Dashboard() {
           "Loading..."
         ) : (
           <>
-            <FilterInput arr={userData} updateFunc={setUsers} />
+            <FilterInput arrData={userData} updateFunc={setUsers} />
+            <div className={styles.sortWrap}>
+              <SortBy arr={users} updateFunc={setUsers} />
+            </div>
             <div className={styles.userCards}>
               {users.map((user, i) => (
                 <UserCard key={i} user={user} />
