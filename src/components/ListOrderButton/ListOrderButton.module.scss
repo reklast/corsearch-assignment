@@ -1,0 +1,13 @@
+@import "../../styles/global-imports.scss";
+
+.orderBtn {
+  border: none;
+  padding: 0.7rem;
+  background-color: $primary-color-dimm;
+  color: $text-color;
+  border-radius: 1rem;
+  &:hover {
+    cursor: pointer;
+    background-color: $button-hover-color;
+  }
+}
