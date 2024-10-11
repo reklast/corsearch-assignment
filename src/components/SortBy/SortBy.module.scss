@@ -1,0 +1,30 @@
+@import "../../styles/global-imports.scss";
+
+.sortOrderWrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sortWrap {
+  .selectedBtn {
+    background-color: $secondary-color;
+  }
+  button {
+    border: none;
+    padding: 0.7rem;
+    background-color: $primary-color-dimm;
+    color: $text-color;
+    &:hover {
+      cursor: pointer;
+      background-color: $button-hover-color;
+    }
+    &:nth-child(1) {
+      border-radius: 1rem 0 0 1rem;
+      margin-left: 0.5rem;
+    }
+    &:nth-child(2) {
+      border-radius: 0 1rem 1rem 0;
+    }
+  }
+}
