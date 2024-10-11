@@ -21,9 +21,14 @@
   overflow-y: scroll;
 }
 
+.sortWrap {
+  width: 100%;
+  margin: 1rem 0;
+}
+
 .userCards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
 }
