@@ -1,0 +1,32 @@
+@import "../global-imports";
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(17, 17, 17);
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
