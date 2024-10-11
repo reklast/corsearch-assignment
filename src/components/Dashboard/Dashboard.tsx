@@ -3,15 +3,20 @@ import { User } from "../../types/users";
 import { getUsers } from "../../services/users";
 
 import Header from "../../componentsShared/Header/Header";
+import FilterInput from "../../componentsShared/FilterInput/FilterInput";
 import UserCard from "../../componentsShared/UserCard/UserCard";
 
 import styles from "./Dashboard.module.scss";
 
 function Dashboard() {
   const [users, setUsers] = useState<User[] | undefined>(undefined);
+  const [userData, setUserData] = useState<User[] | undefined>(undefined);
 
   useEffect(() => {
-    getUsers().then((data) => setUsers(data));
+    getUsers().then((data) => {
+      setUsers(data);
+      setUserData(data);
+    });
   }, []);
 
   return (
@@ -22,6 +27,7 @@ function Dashboard() {
           "Loading..."
         ) : (
           <>
+            <FilterInput arr={userData} updateFunc={setUsers} />
             <div className={styles.userCards}>
               {users.map((user, i) => (
                 <UserCard key={i} user={user} />
