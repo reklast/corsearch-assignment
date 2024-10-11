@@ -1,0 +1,8 @@
+@import "../../styles/global-imports.scss";
+
+.cardWrap {
+    display: flex;
+    border-radius: 1.5rem;
+    background-color: $secondary-color;
+    padding: 1rem;
+}
