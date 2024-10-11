@@ -2,23 +2,23 @@ import { useEffect, useState } from "react";
 import styles from "./FilterInput.module.scss";
 
 function FilterInput({
-  arr,
+  arrData,
   updateFunc,
 }: {
-  arr: object[] | undefined;
+  arrData: object[] | undefined;
   updateFunc: (e: any[]) => void;
 }) {
   const [query, setQuery] = useState<string>("");
 
   useEffect(() => {
-    if (!arr) return;
+    if (!arrData) return;
 
     if (!query) {
-      updateFunc(arr);
+      updateFunc(arrData);
       return;
     }
 
-    const filteredArr = arr.filter((item) =>
+    const filteredArr = arrData.filter((item) =>
       Object.values(item).join("").toLowerCase().includes(query.toLowerCase())
     );
 
